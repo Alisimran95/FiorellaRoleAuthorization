@@ -1,0 +1,37 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Index";
+    
+}
+<section id="products">
+    <div class="container">
+        <div class="row" id="productRow">
+            <input type="hidden" value="@ViewBag.ProductCount" id="productsCount" />
+            @foreach (var product in Model)
+            {
+                <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
+                    <div class="product-item text-center" data-id="@product.Category.Name.ToLower()">
+                        <div class="img">
+                            <a href="">
+                                <img src="~/img/@product.Image" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="title mt-3">
+                            <h6>@product.Name</h6>
+                        </div>
+                        <div class="price">
+                            <span class="text-black-50">Add to cart</span>
+                            <span class="text-black-50">$@product.Price</span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        @*<div class="row justify-content-center">
+            <button class="btn btn-primary mb-4" id="loadMore">Load more...</button>
+        </div>*@
+    </div>
+
+    </section>
+
+

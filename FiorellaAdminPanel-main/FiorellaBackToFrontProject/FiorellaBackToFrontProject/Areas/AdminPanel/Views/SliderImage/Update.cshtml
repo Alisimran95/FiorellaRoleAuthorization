@@ -1,0 +1,27 @@
+﻿@model SliderImage;
+@{
+    ViewData["Title"] = "Update";
+}
+
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                <strong>Update Slider Image</strong> Flower Expert
+            </div>
+            <div class="card-body card-block">
+                <img src ="~/img/@Model.Name" style="width: 100px" height="100px"/>
+                <form method="post" class="" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label asp-for="Photos" class=" form-control-label">Photo</label>
+                        <input asp-for="Photos" class="form-control" accept="image/*">
+                        <span asp-validation-for="Photos" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                    <a asp-action="Index" class="btn btn-danger btn-sm">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

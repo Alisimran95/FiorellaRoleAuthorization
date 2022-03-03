@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Basket";
+}
+
+@model List<BasketViewModel>;
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image</th>
+            <th scope="col">Count</th>
+            <th scope="col">Amount</th>
+        </tr>
+        </thead>
+        <tbody id="cart-list">
+        <partial name="_BasketPartial" model="Model" />
+        </tbody>
+    </table>
+    <div class="row justify-content-center">
+        <div style="float: right">TotalAmount:@ViewBag.TotalAmount</div>
+    </div>
+</div>
+

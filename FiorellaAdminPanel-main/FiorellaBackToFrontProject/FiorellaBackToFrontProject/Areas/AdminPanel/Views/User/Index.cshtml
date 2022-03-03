@@ -1,0 +1,60 @@
+﻿
+@{
+ViewData["Title"] = "Index";
+}
+
+@model List<UserViewModel>;
+
+<div class="row">
+<div class="col-lg-12">
+<div class="card">
+<div class="card-header">
+<strong class="card-title">Logged Users List</strong>
+</div>
+<div class="card-body">
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Role</th>
+        <th scope="col">Status</th>
+        <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in @Model)
+    {
+        <tr>
+                    <td >@item.UserName</td>
+                    <td >@item.Email</td>
+                    <td >@item.Role</td>
+                    @if (item.IsActive)
+                    {
+                        <td>activve</td>
+                        <td>
+                            <a asp-area="AdminPanel" asp-action="AddRole" asp-route-id="@item.Id" class="btn btn-warning">Change Role</a>
+                            <a asp-area="AdminPanel" asp-action="ChangePassword" asp-route-id="@item.Id" class="btn btn-primary">ChangePassword</a>
+                            <a asp-area="AdminPanel" asp-action="Activate" asp-route-id="@item.Id" class="btn btn-danger">Deactivate</a>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>deactive</td>
+                        <td>
+                            <a asp-area="AdminPanel" asp-action="AddRole" asp-route-id="@item.Id"  class="btn btn-secondary">Change Role</a>
+                            <a asp-area="AdminPanel" asp-route-id="@item.Id" class="btn btn-primary" asp-action="ChangePassword">Change Password</a>
+                            <a asp-area="AdminPanel" asp-action="Activate" asp-route-id="@item.Id" class="btn btn-success">Activate</a>
+
+                        </td>
+                    }
+            </tr>
+        }
+    </tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+

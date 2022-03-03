@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model List<SliderImage>;
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <strong class="card-title">Slider Images </strong>
+            </div>
+            <div class="card-body">
+                @{
+                    if (@Model.Count < 5)
+                    {
+                        <a class="btn btn-primary mb-2" asp-controller="SliderImage" asp-action="Create">Create</a>
+                    }
+                }
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in @Model)
+                    {
+                        <tr>
+                            <td>
+                                <img src="~/img/@item.Name" style="width: 100px" height="100px"/>
+                            </td>
+                            <td class="d-flex">
+                                <a class="btn btn-warning" asp-controller="SliderImage" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                                <a class="btn btn-info ml-1 mr-1" asp-controller="SliderImage" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a id="delete-item-btn" class="btn btn-danger delete-item-btn" asp-area="AdminPanel" asp-controller="SliderImage" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

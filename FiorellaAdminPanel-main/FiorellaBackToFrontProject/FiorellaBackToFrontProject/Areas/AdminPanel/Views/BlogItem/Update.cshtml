@@ -1,0 +1,41 @@
+﻿@model BlogItem;
+
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                <strong>Normal</strong> Form
+            </div>
+            <div class="card-body card-block">
+                <form method="post" class="">
+                    <div class="form-group">
+                        <label asp-for="BlogTitle" class="form-control-label">Title</label>
+                        <input asp-for="BlogTitle" class="form-control">
+                        <span asp-validation-for="BlogTitle" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="BlogSubtitle" class=" form-control-label">Subtitle</label>
+                        <input asp-for="BlogSubtitle" class="form-control">
+                        <span asp-validation-for="BlogTitle" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Image" class=" form-control-label">Image Source</label>
+                        <input asp-for="Image" class="form-control">
+                        <span asp-validation-for="BlogTitle" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Date" class=" form-control-label">Date</label>
+                        <input asp-for="Date" class="form-control">
+                        <span asp-validation-for="BlogTitle" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm">Update</button>
+                    <a asp-action="Index"  class="btn btn-danger btn-sm">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
