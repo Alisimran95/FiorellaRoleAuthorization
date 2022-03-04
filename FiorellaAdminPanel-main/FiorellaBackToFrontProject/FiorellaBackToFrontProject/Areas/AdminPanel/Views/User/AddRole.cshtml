@@ -9,18 +9,21 @@
     <form method="post">
     
         <label>Choose a role:</label>
-
         <select name="changedRole" id="changedRole">
-            @foreach(var role in Model)
+            @foreach (var role in Model)
             {
-                if (role.Name == @ViewBag.Role)
+                if (!role.Name.Contains("Admin"))
                 {
-                    <option selected value="@role.Name">@role.Name</option>
+                    if (role.Name == @ViewBag.Role)
+                    {
+                        <option selected value="@role.Name">@role.Name</option>
+                    }
+                    else
+                    {
+                        <option value="@role.Name">@role.Name</option>
+                    }
                 }
-                else
-                {
-                    <option value="@role.Name">@role.Name</option>
-                }
+               
             }
         </select>
 
