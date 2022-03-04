@@ -26,28 +26,28 @@ ViewData["Title"] = "Index";
     @foreach (var item in @Model)
     {
         <tr>
-                    <td >@item.UserName</td>
-                    <td >@item.Email</td>
-                    <td >@item.Role</td>
-                    @if (item.IsActive)
-                    {
-                        <td>activve</td>
-                        <td>
-                            <a asp-area="AdminPanel" asp-action="AddRole" asp-route-id="@item.Id" class="btn btn-warning">Change Role</a>
-                            <a asp-area="AdminPanel" asp-action="ChangePassword" asp-route-id="@item.Id" class="btn btn-primary">ChangePassword</a>
-                            <a asp-area="AdminPanel" asp-action="Activate" asp-route-id="@item.Id" class="btn btn-danger">Deactivate</a>
-                        </td>
-                    }
-                    else
-                    {
-                        <td>deactive</td>
-                        <td>
-                            <a asp-area="AdminPanel" asp-action="AddRole" asp-route-id="@item.Id"  class="btn btn-secondary">Change Role</a>
-                            <a asp-area="AdminPanel" asp-route-id="@item.Id" class="btn btn-primary" asp-action="ChangePassword">Change Password</a>
-                            <a asp-area="AdminPanel" asp-action="Activate" asp-route-id="@item.Id" class="btn btn-success">Activate</a>
+            <td >@item.UserName</td>
+            <td >@item.Email</td>
+            <td >@item.Role</td>
+            @if (item.IsActive)
+            {
+                <td>activve</td>
+                <td>
+                    <a asp-area="AdminPanel" asp-action="AddRole" asp-route-id="@item.Id" class="btn btn-warning">Change Role</a>
+                    <a asp-area="AdminPanel" asp-action="ChangePassword" asp-route-id="@item.Id" class="btn btn-primary">ChangePassword</a>
+                    <a asp-area="AdminPanel" asp-action="Activate" asp-route-id="@item.Id" class="btn btn-danger">Deactivate</a>
+                </td>
+            }
+            else
+            {
+                <td>deactive</td>
+                <td>
+                    <a asp-area="AdminPanel" asp-action="AddRole" asp-route-id="@item.Id"  class="btn btn-secondary">Change Role</a>
+                    <a asp-area="AdminPanel" asp-route-id="@item.Id" class="btn btn-primary" asp-action="ChangePassword">Change Password</a>
+                    <a asp-area="AdminPanel" asp-action="Activate" asp-route-id="@item.Id" class="btn btn-success">Activate</a>
 
-                        </td>
-                    }
+                </td>
+            }
             </tr>
         }
     </tbody>

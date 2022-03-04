@@ -27,7 +27,7 @@ namespace FiorellaBackToFrontProject.Data
             var roles = new List<string>
             {
                 RoleConstants.AdminRole,
-                RoleConstants.ModeratorRole,    
+                RoleConstants.ModeratorRole,
                 RoleConstants.UserRole
             };
 

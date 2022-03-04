@@ -86,7 +86,9 @@ namespace FiorellaBackToFrontProject.Controllers
             }
             //Admin panel deactive edibse , user sayta daxil ola bilmez.
 
-            if (userViewModel.IsActive == true)
+            var FindUser = await _userManager.FindByNameAsync(userViewModel.UserName);
+
+            if (FindUser.IsActive == true)
             {
                 var existUser = await _userManager.FindByNameAsync(loginViewModel.Username);
                 if (existUser == null)

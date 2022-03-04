@@ -7407,11 +7407,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\GithubMvc\\FiorellaAdminPanel-main\\FiorellaBackToFrontProject\\FiorellaBackToFrontProject\\FiorellaBackToFrontProject.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\GithubMvc\\FiorellaRoleAuthorization\\FiorellaAdminPanel-main\\FiorellaBackToFrontProject\\FiorellaBackToFrontProject\\FiorellaBackToFrontProject.csproj",
       "projectName": "FiorellaBackToFrontProject",
-      "projectPath": "C:\\Users\\User\\Desktop\\GithubMvc\\FiorellaAdminPanel-main\\FiorellaBackToFrontProject\\FiorellaBackToFrontProject\\FiorellaBackToFrontProject.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\GithubMvc\\FiorellaRoleAuthorization\\FiorellaAdminPanel-main\\FiorellaBackToFrontProject\\FiorellaBackToFrontProject\\FiorellaBackToFrontProject.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\GithubMvc\\FiorellaAdminPanel-main\\FiorellaBackToFrontProject\\FiorellaBackToFrontProject\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\GithubMvc\\FiorellaRoleAuthorization\\FiorellaAdminPanel-main\\FiorellaBackToFrontProject\\FiorellaBackToFrontProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

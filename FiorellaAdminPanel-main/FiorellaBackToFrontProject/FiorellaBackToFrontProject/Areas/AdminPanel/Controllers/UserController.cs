@@ -36,7 +36,9 @@ namespace FiorellaBackToFrontProject.Areas.AdminPanel.Controllers
 
         public async Task<IActionResult> Index()
         {
+           
             var users = await _appDbContext.Users.ToListAsync();
+            
             List<UserViewModel> userViewModels = new List<UserViewModel>();
             foreach (var user in users)
             {
